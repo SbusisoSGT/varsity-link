@@ -210,7 +210,7 @@ class ProductTableSeeder extends Seeder
         $product = new Product;
         $product->name = 'Oreo cupcake';
         $product->price = 10.00;
-        $product->image = '0reo cupcake.JPG';
+        $product->image = 'Oreo cupcake.JPG';
         $product->link = Str::slug($product->name);
         $product->description = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ratione quis aliquam debitis, ipsa facere vel laborum placeat officia doloribus similique ullam.';
         $product->shop_id = 3;

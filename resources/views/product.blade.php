@@ -39,27 +39,16 @@
             
             <div class="cleaner h50"></div>
             
-            <h4>Etiam In Tellus</h4>
-        	<div class="product_box">
-            	<a href="productdetail.html"><img src="images/product/01.jpg" alt="Image 01" /></a>
-                <h3>Ut eu feugiat</h3>
-                <p class="product_price">$ 100</p>
-                <a href="shoppingcart.html" class="add_to_card">Add to Cart</a>
-                <a href="productdetail.html" class="detail">Detail</a>
-            </div>        	
-            <div class="product_box">
-            	<a href="productdetail.html"><img src="images/product/02.jpg" alt="Image 02" /></a>
-                <h3>Curabitur et turpis</h3>
-                <p class="product_price">$ 200</p>
-                <a href="shoppingcart.html" class="add_to_card">Add to Cart</a>
-                <a href="productdetail.html" class="detail">Detail</a>
-            </div>        	
-            <div class="product_box no_margin_right">
-            	<a href="productdetail.html"><img src="images/product/03.jpg" alt="Image 03" /></a>
-                <h3>Mauris consectetur</h3>
-                <p class="product_price">$ 120</p>
-                <a href="shoppingcart.html" class="add_to_card">Add to Cart</a>
-                <a href="productdetail.html" class="detail">Detail</a>
-            </div>     
+            <h4>Related Products</h4>
+            
+            @foreach ($product->relatedProducts() as $prod)
+                <div class="product_box">
+                    <a href="/{{$product->shop->link}}/{{$prod->link}}"><img src="{{ asset('images/products/'.$prod->image)}}" alt="{{$prod->name}}" /></a>
+                    <h3>{{$prod->name}}</h3>
+                    <p class="product_price">R {{$prod->price}}</p>
+                    <a href="shoppingcart.html" class="add_to_card">Add to Cart</a>
+                    <a href="/{{$prod->shop->link}}/{{$prod->link}}" class="detail">Detail</a>
+                </div>
+            @endforeach     
         </div>   
 @endsection

@@ -31,4 +31,15 @@ class Product extends Model
     {
         return $this->belongsTo('App\Models\Shop');
     }
+
+    /**
+     * Get the products related to this product
+     *
+     * @return string $name
+     */
+    public function relatedProducts()
+    {
+        return $this->shop->products()->get()->except([$this->id]);
+    }
+
 }
