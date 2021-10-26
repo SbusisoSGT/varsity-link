@@ -43,11 +43,11 @@
             
             @foreach ($product->relatedProducts() as $prod)
                 <div class="product_box">
-                    <a href="/{{$product->shop->link}}/{{$prod->link}}"><img src="{{ asset('images/products/'.$prod->image)}}" alt="{{$prod->name}}" /></a>
+                    <a href="/shop/{{$product->shop->link}}/{{$prod->link}}"><img src="{{ asset('images/products/'.$prod->image)}}" alt="{{$prod->name}}" /></a>
                     <h3>{{$prod->name}}</h3>
                     <p class="product_price">R {{$prod->price}}</p>
                     <a href="shoppingcart.html" class="add_to_card">Add to Cart</a>
-                    <a href="/{{$prod->shop->link}}/{{$prod->link}}" class="detail">Detail</a>
+                    <a href="/shop/{{$prod->shop->link}}/{{$prod->link}}" class="detail">Detail</a>
                 </div>
             @endforeach     
         </div>   

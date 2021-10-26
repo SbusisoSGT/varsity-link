@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Station Shop Template</title>
+<title>Varsity Link | @yield('title')</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="{{asset('css/templatemo_style.css')}}" rel="stylesheet" type="text/css" />
@@ -71,11 +71,11 @@ ddsmoothmenu.init({
 	<div id="templatemo_header">
     
     	<div id="site_title">
-        	<h1><a href="#">Station Shop</a></h1>
+        	<h1><a href="/">Varsity Link</a></h1>
         </div>
         
         <div id="header_right">
-	        <a href="#">My Account</a> | <a href="#">My Wishlist</a> | <a href="#">My Cart</a> | <a href="#">Checkout</a> | <a href="#">Log In</a>
+	        <a href="#">My Cart</a> | <a href="#">Checkout</a> | <a href="#">Log In</a>
 		</div>
         
         <div class="cleaner"></div>
@@ -85,11 +85,11 @@ ddsmoothmenu.init({
     	<div id="top_nav" class="ddsmoothmenu">
             <ul>
                 <li><a href="/" class="selected">Home</a></li>
-                <li><a href="/products">Products</a>
+                <li><a href="/shop">Shop</a>
                     <ul>
-                        <li><a href="#submenu1">Sub menu 1</a></li>
-                        <li><a href="#submenu2">Sub menu 2</a></li>
-                        <li><a href="#submenu3">Sub menu 3</a></li>
+                        @foreach (App\Models\Shop::all() as $shop)
+                            <li><a href="/shop/{{$shop->link}}">{{$shop->name}}</a></li>
+                        @endforeach
                   </ul>
                 </li>
                 <li><a href="/about">About</a></li>
@@ -123,12 +123,12 @@ ddsmoothmenu.init({
                 	<ul class="sidebar_list">
                         @foreach (App\Models\Shop::all() as $id => $shop)
                             @if ($id == 0)
-                                <li class="first"><a href="/{{$shop->link}}">{{$shop->name}}</a></li>         
+                                <li class="first"><a href="/shop/{{$shop->link}}">{{$shop->name}}</a></li>         
                             @else
                                 @if ($id == (App\Models\Shop::all()->count() - 1))
-                                    <li class="last"><a href="/{{$shop->link}}">{{$shop->name}}</a></li> 
+                                    <li class="last"><a href="/shop/{{$shop->link}}">{{$shop->name}}</a></li> 
                                 @else
-                                    <li><a href="/{{$shop->link}}">{{$shop->name}}</a></li>
+                                    <li><a href="/shop/{{$shop->link}}">{{$shop->name}}</a></li>
                                 @endif
                             @endif
                         @endforeach
@@ -140,8 +140,8 @@ ddsmoothmenu.init({
                 <div class="content"> 
                     @foreach (App\Models\Product::find([1,6,14, 20]) as $product)
                         <div class="bs_box">
-                            <a href="/{{$product->shop->link}}/{{$product->link}}"><img src="{{asset('images/products/'.$product->image)}}" alt="{{$product->name}}" /></a>
-                            <h4><a href="/{{$product->shop->link}}/{{$product->link}}">{{$product->name}}</a></h4>
+                            <a href="/shop/{{$product->shop->link}}/{{$product->link}}"><img src="{{asset('images/products/'.$product->image)}}" alt="{{$product->name}}" /></a>
+                            <h4><a href="/shop/{{$product->shop->link}}/{{$product->link}}">{{$product->name}}</a></h4>
                             <p class="price">R {{$product->price}}</p>
                             <div class="cleaner"></div>
                         </div>    
@@ -157,7 +157,7 @@ ddsmoothmenu.init({
                 <a href="/">Home</a> | <a href="/products">Products</a> | <a href="/about">About</a> | <a href="/faq">FAQs</a> | <a href="/checkout">Checkout</a> | <a href="/contact">Contact</a>
             </p>
     
-            Copyright © 2021 <a href="/">Your Company Name</a>
+            Copyright © {{date('Y')}} <a href="/">Varsity Link</a>
         </div> <!-- END of templatemo_footer -->
         
     </div> <!-- END of templatemo_wrapper -->

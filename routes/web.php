@@ -30,14 +30,14 @@ Route::get('/faq', function () {
     return view('faq');
 });
 
-Route::get('/{shop}', function ($shop) {
+Route::get('/shop/{shop}', function ($shop) {
     $shop = App\Models\Shop::where('link', $shop)->firstOrFail();
     
     return view('shop')
             ->with('shop', $shop);
 });
 
-Route::get('/{shop}/{product}', function ($shop, $product) {
+Route::get('/shop/{shop}/{product}', function ($shop, $product) {
     $product = App\Models\Product::where('link', $product)->firstOrFail();
 
     return view('product')
