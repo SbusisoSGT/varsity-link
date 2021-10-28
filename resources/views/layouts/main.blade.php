@@ -71,11 +71,11 @@ ddsmoothmenu.init({
 	<div id="templatemo_header">
     
     	<div id="site_title">
-        	<h1><a href="/">Varsity Link</a></h1>
+        	<h1><a href="/"><span style="color: #ededed">Varsity</span> Link</a></h1>
         </div>
         
         <div id="header_right">
-	        <a href="#">My Cart</a> | <a href="#">Checkout</a> | <a href="#">Log In</a>
+	        <a href="/cart">My Cart</a> | <a href="/checkout">Checkout</a> | <a href="/login">Log In</a>
 		</div>
         
         <div class="cleaner"></div>
@@ -101,11 +101,25 @@ ddsmoothmenu.init({
         </div> <!-- end of ddsmoothmenu -->
         <div id="menu_second_bar">
         	<div id="top_shopping_cart">
-            	Shopping Cart: <strong>3 Products</strong> ( <a href="#">Show Cart</a> )
+            	Shopping Cart: <strong>
+                    @if (empty(session('cart')))
+                        0
+                    @else
+                        {{session('cart')->totalQuantity}}
+                        @if (session('cart')->totalQuantity == 1)
+                            Product
+                        @else
+                            Products
+                        @endif
+                    @endif 
+                    
+            </strong> 
+            ( <a href="/cart">Show Cart</a> )
             </div>
         	<div id="templatemo_search">
-                <form action="#" method="get">
-                  <input type="text" value="Search" name="keyword" id="keyword" title="keyword" onfocus="clearText(this)" onblur="clearText(this)" class="txt_field" />
+                <form action="/search" method="POST">
+                    @csrf
+                  <input type="text" value="Search" name="query" id="keyword" title="keyword" onfocus="clearText(this)" onblur="clearText(this)" class="txt_field" />
                   <input type="submit" name="Search" value=" Search " alt="Search" id="searchbutton" title="Search" class="sub_btn"  />
                 </form>
             </div>
@@ -142,7 +156,7 @@ ddsmoothmenu.init({
                         <div class="bs_box">
                             <a href="/shop/{{$product->shop->link}}/{{$product->link}}"><img src="{{asset('images/products/'.$product->image)}}" alt="{{$product->name}}" /></a>
                             <h4><a href="/shop/{{$product->shop->link}}/{{$product->link}}">{{$product->name}}</a></h4>
-                            <p class="price">R {{$product->price}}</p>
+                            <p class="price">R{{$product->price}}</p>
                             <div class="cleaner"></div>
                         </div>    
                     @endforeach

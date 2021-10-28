@@ -68,9 +68,14 @@
                 <div class="product_box">
                     <a href="productdetail.html"><img src="{{asset('images/products/'.$product->image)}}" alt="{{$product->image}}" /></a>
                     <h3>{{$product->name}}</h3>
-                    <p class="product_price">R {{$product->price}}</p>
-                    <a href="shoppingcart.html" class="add_to_card">Add to Cart</a>
-                    <a href="productdetail.html" class="detail">Detail</a>
+                    <p class="product_price">R{{$product->price}}</p>
+                    <form method="POST" action="/cart/add">
+                        @csrf
+                        <input type="hidden" name="product_id" value="{{$product->id}}">
+                        <input type="hidden" name="quantity" value="1">
+                        <button type="submit" class="add_to_card">Add to Cart</button>
+                    </form>
+                    <a href="/shop/{{$product->shop->link}}/{{$product->link}}" class="detail">Detail</a>
                 </div>      
             @endforeach  
     </div> 

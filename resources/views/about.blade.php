@@ -5,20 +5,17 @@
 @section('content')
     <div id="content" class="float_r">
         <h1>About Us</h1>
-        	<h2>History of our online shop</h2>
-        <p>Nam cursus facilisis nibh nec eleifend. Mauris nulla leo, tempus ac laoreet in, aliquet eu sem. Nullam est est, imperdiet vitae mollis nec, aliquet varius ante. Donec laoreet <a href="#">eleifend velit a tristique</a>. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed vehicula elit vel ante venenatis laoreet. Station Shop is free <a rel="nofollow" href="http://www.templatemo.com">website template</a> by templatemo for ecommerce websites or online stores.</p>
-        <ul class="templatemo_list">
-        	<li>Donec aliquam metus a odio molestie eu consequat.</li>
-            <li>Sed a rutrum risus, nam sed ligula et nunc fermentum.</li>
-            <li>Maecenas sit amet diam quis sem euismod porttitor.</li>
-            <li>Aliquam fermentum cursus risus aliquam erat volutpat.</li>
-            <li>Sed fermentum tempus enim, eget iaculis purus imperdiet eget.</li>
-		</ul>
+        	<h2>Who We Are</h2>
+        <p>
+           Varsity Link is a platform that is designed to support online shopping system. It seeks to provide all needed items by students, sold by students who
+           are interested in providing needs for students. Our ecommerce site gives all the necessary infomation of all items that students sell within the university. 
+           Students are given highest priviledge of browsing according to their needs and mostly about what other students like to  buy. It also serves as an advertising platform
+           of the goods and services that our students mostly like to get for themselves.  
+        </p>
         <div class="cleaner h20"></div>
-        <h3>Background of our company</h3>
-		<p>Nam nec leo. Curabitur quis eros <a href="#">a arcu feugiat</a> egestas. Nunc sagittis, dui non porttitor tincidunt, mi tortor tincidunt sem, et aliquet mi tortor eu turpis. Ut nisi ligula, viverra ac, placerat sed, ultricies vitae, neque. Morbi feugiat neque non odio eleifend pulvinar. In risus lacus, consequat eu porta ac, mattis a lacus. Validate <a href="http://validator.w3.org/check?uri=referer" rel="nofollow"><strong>XHTML</strong></a> &amp; <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="nofollow"><strong>CSS</strong></a>.</p>
-        <div class="cleaner"></div>
-        <blockquote>Pellentesque vulputate cursus arcu vel pellentesque. Etiam facilisis imperdiet enim at tempus. Ut tincidunt venenatis est, quis viverra quam scelerisque vel. Aenean eu tellus a arcu blandit lobortis.
+        
+        <blockquote>Our Platform serves as a link between students and student entrepreneurs. The student entrepreneurs provide a variety of all items they are interested in selling through the platform that students who'd love. 
+            Through this system, we aim to reach all students and student entrepreneurs whom are interested in using it.  
         </blockquote>
         </div> 
         <div class="cleaner"></div>

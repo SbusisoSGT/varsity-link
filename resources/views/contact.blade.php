@@ -8,7 +8,6 @@
             <h1>Contact Us</h1>
             <div class="content_half float_l">
 				<h4>Send us a message...</h4>
-                <p>Etiam id massa scelerisque nunc luctus ultrices tellus laoreet eget a sem. Validate <a href="http://validator.w3.org/check?uri=referer" rel="nofollow"><strong>XHTML</strong></a> &amp; <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="nofollow"><strong>CSS</strong></a>.</p>
                 <div id="contact_form">
                    <form method="post" name="contact" action="#">
                         

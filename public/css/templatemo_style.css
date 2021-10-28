@@ -150,7 +150,7 @@ h6 {
 
 #templatemo_header {
 	width: 100%;
-	padding: 50px 0 10px;
+	padding: 40px 0 25px 0;
 }
 
 #templatemo_menu {
@@ -200,14 +200,10 @@ h6 {
 }
 
 #site_title h1 a { 
-	display: block; 
-	width: 164px; 
-	height: 20px; 
-	font-size: 12px; 
-	text-indent: -10000px; 
-	color: #999; 
-	text-align: left; 
-	background: url(../images/templatemo_logo.png) no-repeat top left; 
+	display: block;
+    font-family: fantasy;
+    font-size: 2.3rem;
+    text-align: left;
 }
 
 #header_right { 
@@ -360,6 +356,8 @@ h6 {
 }
 
 .product_box .add_to_card {
+	cursor: pointer;
+	border: none;
 	float: left;
 	display: block;
 	width: 140px;
@@ -368,6 +366,17 @@ h6 {
 	text-align: center;
 	color: #fff;
 	background: url(../images/add_to_cart.jpg)
+}
+
+.button-link{
+	cursor: pointer;
+	border: none;
+	color: #08aee3;
+	background-color: transparent;	
+}
+
+.button-link:hover{
+	text-decoration: underline;
 }
 
 .product_box .detail {
