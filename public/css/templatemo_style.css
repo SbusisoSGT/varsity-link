@@ -249,7 +249,7 @@ h6 {
 	background: #333;
 }
 
-#templatemo_search .sub_btn {
+.sub_btn {
 	float: right;
 	display: block;
 	color: #fff;
@@ -457,6 +457,29 @@ form .submit_btn {
 
 .no_margin_right { 
 	margin-right: 0; 
+}
+
+/*              Whatsapp Chat Prompt            */
+.whatsapp-chat-container {
+    position: fixed;
+    bottom: 3rem;
+    right: 1.5rem;
+}
+
+.whatsapp-chat img{
+    height: 2.0rem;
+}
+
+.whatsapp-chat {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    width: 3.0rem;
+    height: 3.0rem;
+    border-radius: 50%;
+    background: #4fce5d;
+    color: #fff;
+    cursor: pointer;
 }
 
 #templatemo_footer { 

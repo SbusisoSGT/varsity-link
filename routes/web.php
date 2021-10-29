@@ -102,8 +102,7 @@ Route::post('/login',  function (Request $request) {
 
     $result = auth()->attempt($credentials);
 
-    return redirect()
-            ->back();
+    return redirect('/');
 });
 
 Route::get('/register',  function () {
@@ -120,12 +119,18 @@ Route::post('/register',  function (Request $request) {
 
     auth()->attempt(['email' => $request->input('email'), 'password' => $request->input('password')]); 
     
-    return redirect()
-            ->back();
+    return redirect('/');
 });
 
 Route::post('/logout', function () {
     auth()->logout();
 
     return redirect('/');
+});
+
+Route::post('/checkout', function (Request $request) {
+    $var = 'hey';
+
+    return view('complete')
+        ->with('message', 'Your order has been successfully placed');
 });

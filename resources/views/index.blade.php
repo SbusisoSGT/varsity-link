@@ -15,17 +15,17 @@
                             <p>Varsity Link is a platform that is designed to support online shopping system. It seeks to provide all needed items by students.</p>
 							<a href="/about" title="Read more" class="more">Read more</a>
 						</div><!-- /detail -->
-						
+
 						<div class="detail">
-							<h2><a href="#">Fusce hendrerit</a></h2>
-                            <p>Duis dignissim tincidunt turpis eget pellentesque. Nulla consectetur accumsan facilisis. Suspendisse et est lectus, at consectetur sem.</p>
-							<a href="#" title="Read more" class="more">Read more</a>
+							<h2><a href="#">Varsity Link</a></h2>
+                            <p>Varsity Link is a platform that is designed to support online shopping system. It seeks to provide all needed items by students.</p>
+							<a href="/about" title="Read more" class="more">Read more</a>
 						</div><!-- /detail -->
-						
+
 						<div class="detail">
-							<h2><a href="#">Aenean massa cum</a></h2>
-                            <p>Sed vel interdum sapien. Aliquam consequat, diam sit amet iaculis ultrices, diam erat faucibus dolor, quis auctor metus libero vel mi.</p>
-							<a href="#" title="Read more" class="more">Read more</a>
+							<h2><a href="#">Varsity Link</a></h2>
+                            <p>Varsity Link is a platform that is designed to support online shopping system. It seeks to provide all needed items by students.</p>
+							<a href="/about" title="Read more" class="more">Read more</a>
 						</div><!-- /detail -->
 						
 					</div><!-- /details -->

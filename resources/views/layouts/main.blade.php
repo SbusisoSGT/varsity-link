@@ -178,6 +178,11 @@ ddsmoothmenu.init({
         <main>
             @yield('content')
         </main>
+        <section class="whatsapp-chat-container">
+            <a href="https://api.whatsapp.com/send/?phone=27824510976" target="_blank"><div class="whatsapp-chat">
+                <img src="{{ asset('icons/whatsapp-icon.svg') }}" class="whatsapp-icon" alt="">
+            </div></a>
+        </section>
         <div id="templatemo_footer">
             <p>
                 <a href="/">Home</a> | <a href="/products">Products</a> | <a href="/about">About</a> | <a href="/faq">FAQs</a> | <a href="/checkout">Checkout</a> | <a href="/contact">Contact</a>
