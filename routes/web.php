@@ -1,9 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Shop;
+use App\Models\User;
 
 
 /*
@@ -93,4 +95,37 @@ Route::get('/checkout', function () {
 
 Route::get('/login',  function () {
     return view('auth.login');
+});
+
+Route::post('/login',  function (Request $request) {
+    $credentials = ['email' => $request->input('email'), 'password' => $request->input('password')];
+
+    $result = auth()->attempt($credentials);
+
+    return redirect()
+            ->back();
+});
+
+Route::get('/register',  function () {
+    return view('auth.register');
+});
+
+Route::post('/register',  function (Request $request) {
+
+    $user = new User;
+    $user->name = $request->input('name');
+    $user->email = $request->input('email');
+    $user->password = Hash::make($request->input('password'));
+    $user->save();
+
+    auth()->attempt(['email' => $request->input('email'), 'password' => $request->input('password')]); 
+    
+    return redirect()
+            ->back();
+});
+
+Route::post('/logout', function () {
+    auth()->logout();
+
+    return redirect('/');
 });

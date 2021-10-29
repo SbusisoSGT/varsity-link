@@ -11,12 +11,6 @@
 <script type="text/javascript" src="{{asset('js/jquery.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/ddsmoothmenu.js')}}">
 
-/***********************************************
-* Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
-* This notice MUST stay intact for legal use
-* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
-***********************************************/
-
 </script>
 
 <script language="javascript" type="text/javascript">
@@ -75,17 +69,28 @@ ddsmoothmenu.init({
         </div>
         
         <div id="header_right">
-	        <a href="/cart">My Cart</a> | <a href="/checkout">Checkout</a> | <a href="/login">Log In</a>
+	        <a href="/cart">My Cart</a> | <a href="/checkout">Checkout</a> | 
+            @auth
+                <a class="dropdown-item" href="/logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    Logout
+                </a>
+
+                <form id="logout-form" action="/logout" method="POST" class="d-none">
+                    @csrf
+                </form>
+            @else
+                <a href="/login">Log In</a>
+            @endauth
 		</div>
         
         <div class="cleaner"></div>
     </div> <!-- END of templatemo_header -->
     
     <div id="templatemo_menu">
-    	<div id="top_nav" class="ddsmoothmenu">
+    	<div id="top_nav" class="ddsmoothmenu" style="    display: flex; justify-content: space-between;align-items: center;">
             <ul>
                 <li><a href="/" class="selected">Home</a></li>
-                <li><a href="/shop">Shop</a>
+                <li><a>Shop</a>
                     <ul>
                         @foreach (App\Models\Shop::all() as $shop)
                             <li><a href="/shop/{{$shop->link}}">{{$shop->name}}</a></li>
@@ -97,6 +102,13 @@ ddsmoothmenu.init({
                 <li><a href="/checkout">Checkout</a></li>
                 <li><a href="/contact">Contact</a></li>
             </ul>
+            <div class="signed-in" style="margin-left: 18%">
+                @auth
+                    Signed in as <span style="color: #08aee3;">{{auth()->user()->name}}</span>    
+                @else
+                    Don't have an account? <a href="/register">Sign up</a>
+                @endauth
+            </div>
             <br style="clear: left" />
         </div> <!-- end of ddsmoothmenu -->
         <div id="menu_second_bar">

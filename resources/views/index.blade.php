@@ -11,9 +11,9 @@
 					<div class="details">
 					
 						<div class="detail">
-							<h2><a href="#">Station Shop</a></h2>
-                            <p>Station Shop is free website template by templatemo for ecommerce websites or online stores. Sed aliquam arcu. Donec urna massa, cursus et mattis at, mattis quis lectus. </p>
-							<a href="#" title="Read more" class="more">Read more</a>
+							<h2><a href="#">Varsity Link</a></h2>
+                            <p>Varsity Link is a platform that is designed to support online shopping system. It seeks to provide all needed items by students.</p>
+							<a href="/about" title="Read more" class="more">Read more</a>
 						</div><!-- /detail -->
 						
 						<div class="detail">
@@ -46,11 +46,11 @@
 			<div class="backgrounds">
 				
 				<div class="item item_1">
-					<img src="{{asset('images/slider/02.jpg')}}" alt="Slider 01" />
+					<img src="{{asset('images/slider/sefako-sunny.JPG')}}" alt="Sefako Makgatho Sunny" />
 				</div><!-- /item -->
 				
 				<div class="item item_2">
-					<img src="{{asset('images/slider/03.jpg')}}" alt="Slider 02" />
+					<img src="{{asset('images/slider/sefako-cloudy.JPG')}}" alt="Sefako Cloudy" />
 				</div><!-- /item -->
 				
 				<div class="item item_3">

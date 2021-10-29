@@ -64,7 +64,7 @@ class Cart
         {
             if($item['product_id'] == $product_id){
                 if(count($this->items) == 1)
-                    $request->session()->forget('cart');
+                    session()->forget('cart');
                 else{
                     $this->totalQuantity -= $this->items[$key]['quantity'];
                     $this->subtotal -= $this->items[$key]['total'];

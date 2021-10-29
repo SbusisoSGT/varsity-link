@@ -27,7 +27,12 @@
             
             <div class="cleaner h50"></div>
             <h3>Shopping Cart</h3>
-            <h4>TOTAL: <strong>$140</strong></h4>
+            <h4>TOTAL: <strong>
+                @if (empty(session('cart')))
+                    R0
+                @else
+                    R{{session('cart')->totalPrice}}
+                @endif</strong></h4>
 			<p><input type="checkbox" />I have accepted the Terms of Use.</p>
             <table style="border:1px solid #CCCCCC;" width="100%">
                 <tr>

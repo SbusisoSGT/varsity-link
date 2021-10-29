@@ -31,22 +31,13 @@
             </div>
         <div class="content_half float_r">
         	<h4>Mailing Addresses</h4>
-        	<h6><strong>Location One</strong></h6>
-          132-145 Aliquam vitae mi tellus,<br />
-            	Nulla mauris elit pretium, 23900<br />
-            	Pellentesque sit amet<br /><br />
+                123 Motlogeli street<br />
+            	Sefako Makgatho Health Sciences University, 0152<br />
+            	Ga-Rankua<br /><br />
             
-				<strong>Phone:</strong> 090-090-1080<br />
-            	<strong>Email:</strong> <a href="mailto:info@yoursite.com">info@yoursite.com</a><br />
+				<strong>Phone:</strong> 012-782-9304<br />
+            	<strong>Email:</strong> <a href="mailto:info@yoursite.com">info@varsitylink.co.za</a><br />
                 
-            <div class="cleaner h20"></div>
-            <h6><strong>Location Two</strong></h6>
-          211-303 Curabitur tincidunt euismod,<br />
-            	Sed eu  tortor nunc at ipsum, 14080<br />
-            	Vestibulum nec tincidunt<br /><br />
-            
-				<strong>Phone:</strong> 020-050-1920<br />
-            	<strong>Email:</strong> <a href="mailto:info@yoursite.com">info@yoursite.com</a><br />
         </div>
         
         <div class="cleaner h40"></div>    
