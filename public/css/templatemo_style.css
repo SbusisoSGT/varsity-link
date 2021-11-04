@@ -342,6 +342,11 @@ h6 {
 	margin-bottom: 5px;
 }
 
+.star-container img{
+	height: 1.2rem;
+	width: 1.2rem;
+}
+
 .product_box h3 {
 	font-size: 11px;
 	color: #000;
