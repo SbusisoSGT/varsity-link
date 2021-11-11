@@ -5,7 +5,9 @@
 @section('content')
     <div id="content" class="float_r">
         <h1>Login</h1>
-
+        @if (!empty(session('result')))
+            <h4>{{session('result')}}</h4>
+        @endif
         <form action="/login" method="POST" style="display: flex; flex-direction: column;">
             @csrf
             <label for="email">Email:</label> <input type="text" id="email" name="email" class="validate-email required input_field" />

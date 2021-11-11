@@ -5,7 +5,9 @@
 @section('content')
     <div id="content" class="float_r">
         <h1>Register</h1>
-
+        @if (!empty(session('result')))
+            <h4>{{session('result')}}</h4>
+        @endif
         <form action="/register" method="POST" style="display: flex; flex-direction: column;">
             @csrf
 

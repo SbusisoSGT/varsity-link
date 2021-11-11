@@ -36,6 +36,10 @@ Route::get('/faq', function () {
     return view('faq');
 });
 
+Route::get('/privacy', function () {
+    return view('privacy');
+});
+
 Route::get('/shop/{shop}', function ($shop) {
     $shop = Shop::where('link', $shop)->firstOrFail();
     
@@ -102,7 +106,15 @@ Route::post('/login',  function (Request $request) {
 
     $result = auth()->attempt($credentials);
 
-    return redirect('/');
+    if($result)
+        return redirect('/');
+    else{
+
+        session()->flash('result', 'Incorrect email and password combination');
+
+        return redirect()->back()->withInput();
+        }
+
 });
 
 Route::get('/register',  function () {
@@ -119,17 +131,19 @@ Route::post('/register',  function (Request $request) {
 
     auth()->attempt(['email' => $request->input('email'), 'password' => $request->input('password')]); 
     
-    return redirect('/');
+    session()->flash('result', 'Registration successful! Welcome '. auth()->user()->name);
+
+    return redirect()->back();
 });
 
 Route::post('/logout', function () {
     auth()->logout();
 
-    return redirect('/');
+    return redirect()
+                ->back();
 });
 
 Route::post('/checkout', function (Request $request) {
-    $var = 'hey';
 
     return view('complete')
         ->with('message', 'Your order has been successfully placed');
